@@ -1,0 +1,227 @@
+html, body, span, p, a, button {
+    font-family: 'PTSans';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orenburg';
+}
+
+:root {
+    --headerbg: rgba(6, 7, 7, 0.85);
+    --headerUpperTextColor: #939393;
+    --headerTelLinkColor: #999999;
+    --headerSearchButtonBorderColor: #494949;
+    --headerTitleColor: #FFFFFF;
+    --navLinkColor: #BEBEBE;
+    --sliderButtonColor: rgba(255, 112, 40, 1);
+    --sliderButtonTextColor: rgba(255, 255, 255, 1);
+
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.top-header-container {
+    margin-left: 240px;
+    margin-right: 240px;
+    padding-top: 30px;
+}
+
+.header-content {
+    min-width: 1920px;
+    height: 694px;
+    background-image: url('img/header/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--headerbg);
+    height: 751px;
+}
+
+.top-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.top-header-props {
+    margin-left: 26px;
+    color: var(--headerUpperTextColor);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.top-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.tel-link {
+    color: var(--headerTelLinkColor);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-left: 1px;
+}
+
+.top-header-search-button {
+    margin-left: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid var(--headerSearchButtonBorderColor);
+    background-color: rgba(0,0,0,0);
+}
+
+.container {
+    margin-left: 360px;
+    margin-right: 360px;
+}
+
+.main-header {
+    margin-top: 97px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+
+.header-title {
+    font-family: 'Orenburg';
+    color: var(--headerTitleColor);
+    font-size: 60px;
+    line-height: 64px;
+    margin-bottom: 54px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.nav-link, .nav-button {
+    margin-bottom: 24px;
+}
+
+.nav-icon {
+    width: 5px;
+    height: 10px;
+    border: 2px solid #F5702C;
+    margin-right: 10px;
+}
+
+.nav-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #4B4B4B 0%, rgba(38, 38, 37, 0) 100%);
+}
+
+.nav-button {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    margin-right: 15px;
+}
+
+.nav-item a {
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--navLinkColor);
+}
+
+.main-header-right-slider-photo {
+    width: 700px;
+    margin-left: 25px;
+    position: absolute;
+    top: -29px;
+    padding-top: 85px;
+    animation: fade;
+    animation-duration: 1500ms;
+}
+
+.slider-button-price {
+    border-radius: 2px;
+    right: 500px;
+    top: 510px;
+    position: absolute;
+    width: 141px;
+    height: 50px;
+    background: var(--sliderButtonColor);
+    color: var(--sliderButtonTextColor);
+    align-items: center;
+    font-size: 24px;
+    line-height: 24px;
+    border: none;
+}
+
+.slider-button-price-decoration {
+    border-radius: 2px;
+    position: absolute;
+    right: 496px;
+    top: 514px;
+    width: 141px;
+    height: 50px;
+    background: rgba(0,0,0,0);
+    border: 1px solid rgba(254, 91, 0, 1);
+    cursor: unset;
+}
+
+.header-slider {
+    margin-top: 104px;
+}
+
+.fade-button {
+    animation: fade;
+    animation-duration: 1000ms;
+}
+
+.slider-button{
+    background: rgba(87, 87, 87, 1);
+    width: 31px;
+    height: 2px;
+    border: none;
+    margin-right: 10px;
+    animation: fade;
+    animation-duration: 1000ms;
+}
+
+.slider-button-active {
+    background: rgba(245, 112, 44, 1);
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.about-company {
+    height: 363px;
+    background: rgba(246, 246, 246, 1);
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@font-face {
+    font-family: 'PTSans';
+    src: url('fonts/PTSans-Regular.ttf') format('TrueType');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Orenburg';
+    src: url('fonts/OrenburgC.ttf') format('TrueType');
+    font-style: normal;
+    font-weight: normal;
+}
